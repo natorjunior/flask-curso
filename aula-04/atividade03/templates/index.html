@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    {{ media }}
+    <table>
+        <thead>
+          <tr>
+              <th>Nome</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>cor</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for car in dados%}
+            <tr>
+                <td>{{car.nome}}</td>
+                <td>{{car.marca}}</td>
+                <td>{{car.modelo}}</td>
+                
+                <td>
+                    <i class="fa fa-square" style="font-size:48px;color:{{car.cor}}"></i>              
+                </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</body>
+</html>
